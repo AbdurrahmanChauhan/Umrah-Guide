@@ -1,0 +1,598 @@
+/* Umrah Guide — Hanafi Pathway
+   Light, respectful Islamic aesthetic */
+
+:root {
+  --bg: #faf8f5;
+  --paper: #f5f1eb;
+  --ink: #1a1a18;
+  --ink-muted: #4a4845;
+  --green-deep: #0d4d2b;
+  --green-mid: #1a6b3c;
+  --green-soft: #e8f2ed;
+  --gold: #a67c52;
+  --gold-light: #c9a87c;
+  --accent: #2d6a4f;
+  --fard: #8b2500;
+  --wajib: #b8860b;
+  --sunnah: #0d4d2b;
+  --mustahabb: #2d6a4f;
+  --font-ar: 'Amiri', serif;
+  --font-en: 'Source Serif 4', Georgia, serif;
+  --radius: 8px;
+  --shadow: 0 2px 12px rgba(13, 77, 43, 0.08);
+  --shadow-hover: 0 4px 20px rgba(13, 77, 43, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-en);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(165deg, var(--green-deep) 0%, var(--green-mid) 50%, #1e5631 100%);
+  color: #fff;
+  padding: 2.5rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.header-inner {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.bismillah {
+  font-family: var(--font-ar);
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  opacity: 0.92;
+  margin: 0 0 1rem;
+}
+
+.header h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Nav */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--paper);
+  border-bottom: 1px solid rgba(13, 77, 43, 0.12);
+  box-shadow: var(--shadow);
+}
+
+.nav a {
+  color: var(--green-deep);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav a:hover {
+  background: var(--green-soft);
+  color: var(--green-mid);
+}
+
+/* Main */
+.main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.intro {
+  padding: 1.5rem 1.25rem;
+  background: var(--green-soft);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--green-mid);
+}
+
+.intro-text {
+  margin: 0;
+  color: var(--ink);
+}
+
+/* Phase sections */
+.phase h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  margin: 0 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.phase-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--green-deep);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+.phase-desc {
+  color: var(--ink-muted);
+  margin: 0 0 1.25rem;
+}
+
+.rulings {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rulings li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 1.5rem;
+  border-bottom: 1px solid rgba(13, 77, 43, 0.08);
+}
+
+.rulings li:last-child {
+  border-bottom: none;
+}
+
+.rulings li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 6px;
+  height: 6px;
+  background: var(--gold-light);
+  border-radius: 50%;
+}
+
+.rulings small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--ink-muted);
+  font-size: 0.9em;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.35rem;
+}
+
+.badge.fard {
+  background: #fde8e4;
+  color: var(--fard);
+}
+
+.badge.wajib {
+  background: #fef6e0;
+  color: #8b6914;
+}
+
+.badge.sunnah {
+  background: var(--green-soft);
+  color: var(--sunnah);
+}
+
+.badge.mustahabb {
+  background: #e0efe8;
+  color: var(--mustahabb);
+}
+
+/* Arabic blocks */
+.card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(13, 77, 43, 0.08);
+}
+
+.arabic-block h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  margin: 0 0 0.75rem;
+}
+
+.arabic {
+  font-family: var(--font-ar);
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+  direction: rtl;
+}
+
+.translit {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin: 0 0 0.35rem;
+}
+
+.translation {
+  margin: 0;
+  color: var(--ink);
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin: 0 0 0.5rem;
+}
+
+.video-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0;
+}
+.video-links li {
+  padding: 0.25rem 0;
+}
+.video-links li::before {
+  display: none;
+}
+.video-links a {
+  color: var(--green-mid);
+  text-decoration: none;
+}
+.video-links a:hover {
+  text-decoration: underline;
+}
+
+.rulings-num {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+.rulings-num li {
+  padding-left: 0.25rem;
+}
+.rulings-num li::before {
+  display: none;
+}
+[dir="rtl"] .rulings-num {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+[dir="rtl"] .rulings-num li {
+  padding-left: 0;
+  padding-right: 0.25rem;
+}
+
+/* Dam section */
+.dam .dam-list {
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.dam .dam-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Checklist */
+.checklist-section h2 {
+  font-size: 1.35rem;
+  color: var(--green-deep);
+  margin: 0 0 0.5rem;
+}
+
+.checklist-desc {
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  margin: 0 0 1.25rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(13, 77, 43, 0.08);
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 0.75rem;
+  margin: 0.25rem 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.check-item:hover {
+  background: var(--green-soft);
+}
+
+.check-item input {
+  margin: 0.25rem 0 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--green-mid);
+  flex-shrink: 0;
+}
+
+.check-item input:checked + span {
+  color: var(--ink-muted);
+  text-decoration: line-through;
+}
+
+.check-item span {
+  flex: 1;
+}
+
+.completion-msg {
+  margin: 1.25rem 0 0;
+  padding: 0.75rem 1rem;
+  background: var(--green-soft);
+  border-radius: var(--radius);
+  font-weight: 600;
+  color: var(--green-deep);
+  min-height: 2.5rem;
+}
+
+.completion-msg:empty {
+  display: none;
+}
+
+/* Duas section */
+.duas-section .section-intro {
+  margin-bottom: 1.5rem;
+}
+.dua-item {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(13, 77, 43, 0.08);
+}
+.dua-item h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  margin: 0 0 0.25rem;
+}
+.dua-context {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin: 0 0 0.75rem;
+}
+.dua-item .arabic {
+  margin-bottom: 0.4rem;
+}
+.dua-item .translit {
+  margin-bottom: 0.35rem;
+}
+.duas-tip {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--green-soft);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  border-left: 4px solid var(--green-mid);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-top: 1px solid rgba(13, 77, 43, 0.12);
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}
+
+.footer .arabic {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-note {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-credit {
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(13, 77, 43, 0.12);
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.footer-credit em {
+  font-style: italic;
+  color: var(--green-mid);
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .header {
+    padding: 1.75rem 1rem 2.5rem;
+  }
+
+  .bismillah {
+    font-size: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    padding: 0.5rem;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .main {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .phase h2 {
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .arabic {
+    font-size: 1.3rem;
+  }
+}
+
+/* Language selection page */
+.lang-select-page .header-lang {
+  padding: 2rem 1.5rem 2.5rem;
+}
+
+.lang-select-page .main-lang {
+  padding: 2.5rem 1.25rem 3rem;
+  max-width: 40rem;
+}
+
+.lang-prompt {
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lang-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  padding: 1.5rem 1rem;
+  background: var(--paper);
+  border: 2px solid rgba(13, 77, 43, 0.15);
+  border-radius: var(--radius);
+  color: var(--green-deep);
+  text-decoration: none;
+  font-weight: 600;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow);
+}
+
+.lang-card:hover {
+  background: var(--green-soft);
+  border-color: var(--green-mid);
+  box-shadow: var(--shadow-hover);
+}
+
+.lang-name {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.lang-desc {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+
+.lang-card:hover .lang-desc {
+  color: var(--ink);
+}
+
+/* RTL (Urdu) */
+[dir="rtl"] .rulings li::before {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .phase-num {
+  order: 1;
+}
+
+[dir="rtl"] .nav {
+  flex-direction: row-reverse;
+}
+
+.footer-lang {
+  padding: 1.5rem 1rem;
+}
+
+/* Language switch link (on guide pages) */
+.lang-switch {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--green-mid);
+  text-decoration: none;
+}
+
+.lang-switch:hover {
+  text-decoration: underline;
+}
